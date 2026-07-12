@@ -64,8 +64,29 @@
       color: var(--fg);
       text-decoration: none;
       white-space: nowrap;
+      position: relative;
     }
     .nav-brand span { color: var(--accent); }
+    .nav-brand::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--accent), #f5d06e);
+      transition: width 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .nav-brand:hover::after { width: 100%; }
+    .nav-brand span {
+      display: inline-block;
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), color 0.3s ease;
+    }
+    .nav-brand:hover span {
+      transform: translateY(-2px) scale(1.05);
+      color: #f5d06e;
+      text-shadow: 0 0 20px rgba(212,168,67,0.6);
+    }
     .nav-tabs {
       display: flex;
       gap: 0.25rem;
