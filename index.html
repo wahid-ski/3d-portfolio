@@ -545,14 +545,14 @@
     .video-wrapper {
       max-width: 900px;
       margin: 0 auto;
-      aspect-ratio: 16/9;
       border-radius: 16px;
       overflow: hidden;
       border: 1px solid var(--border);
       background: #000;
       box-shadow: 0 24px 48px rgba(0,0,0,0.4);
     }
-    .video-wrapper iframe { width: 100%; height: 100%; border: none; }
+    .video-wrapper video,
+    .video-wrapper iframe { width: 100%; height: auto; display: block; aspect-ratio: 16/9; }
 
     /* Contact */
     .contact-grid {
@@ -917,9 +917,8 @@
           <h2 class="section-title" id="video-title">Video CV</h2>
         </div>
         <div class="video-wrapper">
-          <iframe src="https://www.youtube.com/embed/At6XyItIHsE" title="Video CV" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe src="https://player.vimeo.com/video/1209984724" title="Video CV" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
         </div>
-        <p style="text-align:center; margin-top:1.5rem; color:var(--muted); font-size:0.9rem;">Placeholder video — replace with your own video CV</p>
       </div>
     </section>
 
